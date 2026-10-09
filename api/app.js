@@ -21,3 +21,5 @@ app.post("/api/newGrade", async (req, res) =>
     await db.execute(`UPDATE grades SET count = count + 1;`);
     res.status(200).send();
 });
+
+module.exports = app;
