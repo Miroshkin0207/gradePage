@@ -10,7 +10,7 @@ else
 let countGrades;
 async function getGrades()
 {
-    let countGradesAnswer = await fetch("https://gradepage.vercel.app/getGrades", {
+    let countGradesAnswer = await fetch("https://gradepage.vercel.app/api/getGrades", {
         method: "GET"
     });
     countGrades = await countGradesAnswer.text();
@@ -65,7 +65,7 @@ heart.onclick = async () =>
         heart.src = "heart.png";
         document.querySelector("p").innerHTML = "Спасибо!";
         localStorage.setItem("hasGrade", true);
-        await fetch("https://gradepage.vercel.app/newGrade", {
+        await fetch("https://gradepage.vercel.app/api/newGrade", {
             method: "POST"
         });       
     }  
