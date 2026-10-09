@@ -8,6 +8,7 @@ img {
     width: 350px;
     height: 325px;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
     cursor: pointer;
 }
 
