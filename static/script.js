@@ -21,8 +21,8 @@ getGrades();
 function updateTextGrades()
 { 
     document.querySelectorAll("p")[1].innerHTML = `Оценку поставил${
-    countGrades % 100 != 1 && countGrades % 10 == 1 ? "" : "и"} ${countGrades} человек${
-    countGrades % 100 != 1 && [2, 3, 4].includes(countGrades % 10) ? "а" : ""}`;
+    String(countGrades)[String(countGrades).length - 2] != 1 && countGrades % 10 == 1 ? "" : "и"} ${countGrades} человек${
+    String(countGrades)[String(countGrades).length - 2] != 1 && [2, 3, 4].includes(countGrades % 10) ? "а" : ""}`;
 }
 
 async function delay(time)
