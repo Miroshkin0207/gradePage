@@ -2,7 +2,8 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "static/"
+      "destination": "static/",
+      "permanent": true
     }
   ],
   "rewrites": [
