@@ -3,14 +3,14 @@
     {
       "source": "/",
       "destination": "static/"
+    },
+    {
+      "source": "/api/",
+      "destination": "/api/app.js"
     }
   ],
    "builds": [
     { "src": "api/app.js", "use": "@vercel/node" },
     { "src": "static/**", "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "api/app.js" },
-    { "src": "/(.*)", "dest": "static/$1" }
   ]
 }
