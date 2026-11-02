@@ -11,9 +11,5 @@
       "source": "/api/path*",
       "destination": "/api/app.js"
     }
-  ],
-   "builds": [
-    { "src": "api/app.js", "use": "@vercel/node" },
-    { "src": "static/**", "use": "@vercel/static" }
   ]
 }
