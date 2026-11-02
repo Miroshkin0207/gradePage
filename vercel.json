@@ -3,9 +3,11 @@
     {
       "source": "/",
       "destination": "static/"
-    },
+    }
+  ],
+  "rewrites": [
     {
-      "source": "api/(.*)",
+      "source": "/api/path*",
       "destination": "/api/app.js"
     }
   ],
