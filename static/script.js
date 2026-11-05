@@ -1,3 +1,4 @@
+const url = window.location.href.includes("git-main") ? "gradepage-git-main-miron55236" : "gradepage";
 const heart = document.querySelector("img");
 if (localStorage.getItem("hasGrade"))
 {
@@ -10,7 +11,7 @@ else
 let countGrades;
 async function getGrades()
 {
-    let countGradesAnswer = await fetch("https://gradepage-git-main-site-miroshkin.vercel.app/api/getGrades", {
+    let countGradesAnswer = await fetch(`https://${url}.vercel.app/api/getGrades`, {
         method: "GET"
     });
     countGrades = await countGradesAnswer.text();
@@ -65,7 +66,7 @@ heart.onclick = async () =>
         heart.src = "heart.png";
         document.querySelector("p").innerHTML = "Спасибо!";
         localStorage.setItem("hasGrade", true);
-        await fetch("https://gradepage-git-main-site-miroshkin.vercel.app/api/newGrade", {
+        await fetch(`https://${url}.vercel.app/api/newGrade`, {
             method: "POST"
         });       
     }  
