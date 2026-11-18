@@ -1,4 +1,4 @@
-const url = window.location.href.includes("git-main") ? "gradepage-git-main-miron55236" : "gradepage";
+const url = window.location.href.includes("git-main") ? "gradepage-git-main-mir55" : "gradepage";
 const heart = document.querySelector("img");
 if (localStorage.getItem("hasGrade"))
 {
